@@ -5,7 +5,6 @@ import { Model } from 'mongoose';
 import { UserDto } from './dto/user.dto';
 import * as bcrypt from 'bcryptjs';
 import { JwtService } from '@nestjs/jwt';
-import { TokenDto } from './dto/token.dto';
 
 @Injectable()
 export class AuthService {
@@ -48,9 +47,5 @@ export class AuthService {
     const token = this.jwtService.sign({ id: user._id });
 
     return { token };
-  }
-
-  async signOut(token: TokenDto): Promise<boolean> {
-    return true;
   }
 }
