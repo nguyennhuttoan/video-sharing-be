@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { VideoController } from './video.controller';
-import { VideoService } from './video.service';
+import { VideoController } from './controller/video.controller';
+import { VideoService } from './service/video.service';
 import { AuthModule } from '../auth/auth.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { VideoSchema } from './schema/video.schema';

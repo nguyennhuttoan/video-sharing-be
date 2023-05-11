@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import * as mongoose from 'mongoose';
-import { Video } from './schema/video.schema';
-import { User } from '../auth/schema/user.schema';
+import { Video } from '../schema/video.schema';
+import { User } from '../../auth/schema/user.schema';
 import { InjectModel } from '@nestjs/mongoose';
 
 @Injectable()

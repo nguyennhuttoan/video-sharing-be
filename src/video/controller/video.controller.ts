@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post, Req, UseGuards } from '@nestjs/common';
-import { VideoService } from './video.service';
-import { Video } from './schema/video.schema';
-import { VideoDto } from './dto/video.dto';
+import { VideoService } from '../service/video.service';
+import { Video } from '../schema/video.schema';
+import { VideoDto } from '../dto/video.dto';
 import { AuthGuard } from '@nestjs/passport';
 
 @Controller('video')
