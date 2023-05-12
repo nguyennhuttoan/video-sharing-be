@@ -24,7 +24,13 @@ describe('VideoService', () => {
 
   let videoService: VideoService;
   const mockVideoModel = {
-    find: jest.fn(() => {
+    find: jest.fn(() => ({
+      sort: jest.fn(() => {
+        return mockVideos;
+      }),
+    })),
+
+    sort: jest.fn(() => {
       return mockVideos;
     }),
     create: jest.fn(() => {

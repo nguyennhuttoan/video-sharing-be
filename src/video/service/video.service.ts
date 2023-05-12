@@ -12,7 +12,18 @@ export class VideoService {
   ) {}
 
   async findAll(): Promise<Video[]> {
-    const videos = await this.videoModel.find();
+    const videos = await this.videoModel
+      .find(
+        {},
+        {
+          title: 1,
+          description: 1,
+          url: 1,
+          _id: 0,
+        },
+      )
+      .sort({ createdAt: -1 });
+
     return videos;
   }
 
