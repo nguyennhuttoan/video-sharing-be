@@ -29,10 +29,6 @@ describe('VideoService', () => {
         return mockVideos;
       }),
     })),
-
-    sort: jest.fn(() => {
-      return mockVideos;
-    }),
     create: jest.fn(() => {
       return {
         ...mockVideo,
