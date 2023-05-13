@@ -15,6 +15,9 @@ export class Video {
   @Prop()
   url: string;
 
+  @Prop()
+  email: string;
+
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
   user: User;
 }

@@ -19,6 +19,7 @@ export class VideoService {
           title: 1,
           description: 1,
           url: 1,
+          email: 1,
           _id: 0,
         },
       )
@@ -28,7 +29,7 @@ export class VideoService {
   }
 
   async create(video: Video, user: User): Promise<Video> {
-    const data = Object.assign(video, { user: user._id });
+    const data = Object.assign(video, { user: user._id, email: user.email });
 
     const createdVideo = await this.videoModel.create(data);
     return createdVideo;

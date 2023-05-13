@@ -15,5 +15,8 @@ export class VideoDto {
   readonly url: string;
 
   @IsEmpty({ message: 'Error' })
+  readonly email: string;
+
+  @IsEmpty({ message: 'Error' })
   readonly user: User;
 }

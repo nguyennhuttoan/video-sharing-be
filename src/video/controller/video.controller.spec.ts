@@ -18,6 +18,7 @@ describe('VideoController', () => {
     title: 'test',
     description: 'test',
     url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    email: 'test@test.com',
     user: req.user as User,
   };
 
